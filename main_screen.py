@@ -1,21 +1,25 @@
 c=5
-l=[]
 print("Bem vindo a crissystems - To do List")
 while(c!=0):
-    print("Digite 1 para adicionar uma tarefa\nDigite 2 para listar as tarefas\nDigite 3 para editar alguma tarefa\nDigite 4 para excluir uma tarefa")
+    print("\nDigite 1 para adicionar uma tarefa\nDigite 2 para listar as tarefas\nDigite 3 para editar alguma tarefa\nDigite 4 para excluir uma tarefa\nDigite 0 para sair")
     c=int(input())
     if(c==0):
         print("Até a próxima!")
     elif(c==1):
         print("\nDigite a tarefa a ser adicionada")
         l.append(input())
-        print("\n")
+        print("Tarefa adicionada!")
     elif(c==2):
-        print("Lista: ")
-        for i in l:
-            print(i)
-        print("\n")
+        print("\nLista: ")
+        for i,e in enumerate(l):
+            print(i+1,":",e)
     elif(c==3):
-        print("ainda implementando - editar tarefas")
+        i=input("\nDigite a tarefa a ser alterada\n")
+        i=l.index(i)
+        l[i]=input("Digite a tarefa com a alteração\n")
+        print("Tarefa alterada!")
     elif(c==4):
-        print("ainda implementando - excluir tarefas")
+        i=input("\nDigite a tarefa a ser alterada\n")
+        i=l.index(i)
+        del(l[i])
+        print("Tarefa excluída!")
