@@ -1,4 +1,4 @@
-import os
+import os, modulo_adicionar, modulo_listar, modulo_alterar, modulo_excluir
 c=5
 l=[]
 try:
@@ -16,23 +16,13 @@ while(c!=0):
     if(c==0):
         print("Até a próxima!")
     elif(c==1):
-        print("\nDigite a tarefa a ser adicionada")
-        l.append(input())
-        print("Tarefa adicionada!")
+        l=modulo_adicionar.adicionar_elemento(l)
     elif(c==2):
-        print("\nLista: ")
-        for i,e in enumerate(l):
-            print(i+1,":",e)
+        modulo_listar.listar_elementos(l)
     elif(c==3):
-        i=input("\nDigite a tarefa a ser alterada\n")
-        i=l.index(i)
-        l[i]=input("Digite a tarefa com a alteração\n")
-        print("Tarefa alterada!")
+        l=modulo_alterar.alterar_elemento(l)
     elif(c==4):
-        i=input("\nDigite a tarefa a ser excluída\n")
-        i=l.index(i)
-        del(l[i])
-        print("Tarefa excluída!")
+        l=modulo_excluir.excluir_elemento(l)
 mt=open("database.txt","a")
 for i in l:
     mt.write(i)
