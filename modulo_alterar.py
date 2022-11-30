@@ -4,7 +4,6 @@ def alterar_elemento(lista):
         armazenador=lista.index(armazenador)
         lista[armazenador]=input("Digite a tarefa com a alteracao\n")
         print("Tarefa alterada!")
-        return lista
     except:
         print("Tarefa inexistente")
-        return lista
+    return lista
