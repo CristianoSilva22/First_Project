@@ -4,7 +4,6 @@ def excluir_elemento(lista):
         armazenador=lista.index(armazenador)
         del(lista[armazenador])
         print("Tarefa excluida!")
-        return lista
     except:
         print("Tarefa inexistente")
-        return lista
+    return lista
